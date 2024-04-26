@@ -39,47 +39,56 @@ Python version used in the project development: version 3.11
   	(D) audios
    	In this directory, the system stores the audio extracted from the videos.
     
-    (D) labeling 
-    In this directory, files related to the human (ear) annotation of sound events are placed. The name of each file must be « labeling_<order number of the corresponding video> ». Each line of the file must be composed of: <type of event>;<court side>;<first sample>;<last sample>.
-    
-    (D) Hyperparameters
-    	(F) HyP_data_scheme.json
-     
-     	(F) HyP_learn_scheme.json
-      	Data structure that formally represents the HyP_data and HyP_learn scheme. The structure must be preserved, so that the information can be processed in a generic way by the system.
-       
+    	(D) labeling 
+     	In this directory, files related to the human (ear) annotation of sound events are placed. The name of each file must be « labeling_<order number of the corresponding video> ». Each line of the file must be composed of: <type of event>;<court side>;<first sample>;<last sample>.
+
+      
+(D) Hyperparameters
+
+	(F) HyP_data_scheme.json
+ 
+ 	(F) HyP_learn_scheme.json
+  	Data structure that formally represents the HyP_data and HyP_learn scheme. The structure must be preserved, so that the information can be processed in a generic way by the system.
+
+
 (D) my_utils
 
 	(F) classifier_fuctions.py
  	Module that contains the functions to get the classifiers. This file can be used to extend the system by incorporating additional functions (plug-in model) to explore other classifiers.
-     
-	 (F) feature_extraction_fuctions.py
-       Module that contains the functions to extract audio features. Each function receives the following parameters: the audio file as a floating point time series; all HyP_data_global ; and the specific parameters to the respective audio feature that have been defined in the HyP_data schema. This file can be used to extend the system by incorporating additional functions (plug-in model) to explore other audio features.
+  
+  	(F) feature_extraction_fuctions.py
+   	Module that contains the functions to extract audio features. Each function receives the following parameters: the audio file as a floating point time series; all HyP_data_global ; and the specific parameters to the respective audio feature that have been defined in the HyP_data schema. This file can be used to extend the system by incorporating additional functions (plug-in model) to explore other audio features.
 
-     (F) processCsvFile.py
-       Utility functions for processing CSV files.
+	(F) processCsvFile.py
+ 	Utility functions for processing CSV files.
 
-     (F) videoProcessing.py
-      Utility functions for processing videos.
+	(F) videoProcessing.py
+ 	Utility functions for processing videos.
+
 
 (D) Project
-     (D) DatasetCreation
-         (F) createDataset.py
-            This is the main file for the dataset creation. 
-			
-         (F) datasetCreator.py
-            Auxiliary file for the dataset creation.
 
-	 (D) DatasetStorage
-	    In this directory, the system stores the datasets created, as well as the HyP_data of each one.
+	(D) DatasetCreation
+ 
+ 		(F) createDataset.py
+   		This is the main file for the dataset creation. 
+     
+     		(F) datasetCreator.py
+       		Auxiliary file for the dataset creation.
+	 
+  	(D) DatasetStorage
+   	In this directory, the system stores the datasets created, as well as the HyP_data of each one.
+    
+    	(D) Model
+     
+     		(F) Pipeline_run_Grid_search.py    
+       
+       		(F) Pipeline_run_Bayes_search.py
+	 	Both files are the main for the datasets processing, and can be executed independently. They perform the same task, but one of them uses the grid search technique, and the other uses the Bayes optimization technique.
 
-	 (D) Model
-		 (F) Pipeline_run_Grid_search.py    
-		 (F) Pipeline_run_Bayes_search.py
-		    Both files are the main for the datasets processing, and can be executed independently. They perform the same task, but one of them uses the grid search technique, and the other uses the Bayes optimization technique.
 
 (D) Results
-   In this directory, the system stores the final results in a CSV file. (The final results are also printed in the console output)
+In this directory, the system stores the final results in a CSV file. (The final results are also printed in the console output)
 
 
 # 
