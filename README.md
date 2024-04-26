@@ -84,10 +84,11 @@ Python version used in the project development: version 3.11
      		(F) Pipeline_run_Grid_search.py    
        
        		(F) Pipeline_run_Bayes_search.py
-	 	Both files are the main for the datasets processing, and can be executed independently. They perform the same task, but one of them uses the grid search technique, and the other uses the Bayes optimization technique.
+	 		Both files are the main for the datasets processing, and can be executed independently. They perform the same task, but one of them uses the grid search technique, and the other uses the Bayes optimization technique.
 
 
 (D) Results
+
 In this directory, the system stores the final results in a CSV file. (The final results are also printed in the console output)
 
 
