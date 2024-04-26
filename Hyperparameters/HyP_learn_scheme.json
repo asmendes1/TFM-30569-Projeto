@@ -1,0 +1,62 @@
+{
+  "algorithms": [
+    {
+      "name": "SVM",
+      "function_name": "svm_classifier",
+      "params": {
+        "classifier__C": {
+          "param_type": "int",
+          "range": {
+            "min": 1,
+            "step": 2,
+            "max": 20
+          }
+        },
+        "classifier__kernel": {
+          "param_type": "categorical",
+          "values": ["rbf", "linear", "poly"],
+          "default_value": "rbf"
+        }
+      }
+    },
+
+    {
+      "name": "MLP",
+      "function_name": "mlp_classifier",
+      "params": {
+        "classifier__hidden_layer_sizes": {
+          "param_type": "tuple",
+          "values": [[50], [100], [50, 50], [70, 70], [100, 100], [30, 30, 30]],
+          "default_value": [100]
+        },
+        "classifier__activation": {
+          "param_type": "categorical",
+          "values": ["logistic", "relu"],
+          "default_value": "relu"
+        },
+        "classifier__solver": {
+          "param_type": "categorical",
+          "values": ["sgd", "adam"],
+          "default_value": "adam"
+        },
+        "classifier__learning_rate_init": {
+          "param_type": "real",
+          "range": {
+            "min": 0.004,
+            "step": 0.001,
+            "max": 0.006
+          }
+        },
+        "classifier__max_iter": {
+          "param_type": "int",
+          "range": {
+            "min": 90,
+            "step": 5,
+            "max": 120
+          }
+        }
+      }
+    }
+  ]
+}
+

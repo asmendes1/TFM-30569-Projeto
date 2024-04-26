@@ -1,0 +1,54 @@
+{
+    "HyP_data_global": {
+        "event_length": 0.5,
+        "sampling_frequency": 44100,
+        "number_of_shifted_samples": 4096,
+        "number_of_segments": 5
+    },
+    "HyP_data_feature": [
+        {
+            "feature_domain": "time_domain",
+            "feature_name": "Onset",
+            "feature_HyP": {
+                "function": {
+                    "function_name": "feature_Onset",
+                    "function_params": []
+                }
+            }
+        },
+        {
+            "feature_domain": "time_domain",
+            "feature_name": "RMS",
+            "feature_HyP": {
+                "function": {
+                    "function_name": "feature_RMS",
+                    "function_params": []
+                }
+            }
+        },
+        {
+            "feature_domain": "frequency_domain",
+            "feature_name": "Spectralflux",
+            "feature_HyP": {
+                "function": {
+                    "function_name": "feature_Spectralflux",
+                    "function_params": []
+                }
+            }
+        },
+        {
+            "feature_domain": "frequency_domain",
+            "feature_name": "Band-Energy-Ratio",
+            "feature_HyP": {
+                "function": {
+                    "function_name": "feature_BER",
+                    "function_params": [
+                        {
+                            "split_frequency": 2000
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
