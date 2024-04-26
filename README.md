@@ -25,9 +25,11 @@ Python version used in the project development: version 3.11
 2. Structure of the project: directories (D) and files (F) 
 
 (D) Configurations
+
 (F) constants.py
 	Initial constants for the project. (Help avoiding the hardcoded data)
  	The ..._PATH constants represent the path from the project root directory.
+
 
 (D) Data
      (D) videos
