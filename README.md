@@ -32,23 +32,26 @@ Python version used in the project development: version 3.11
 
 
 (D) Data
-     (D) videos
-       The videos to be processed by the system are placed in this directory. The file name of each video must end with « _<video order number> ».
-     
-	 (D) audios
-       In this directory, the system stores the audio extracted from the videos.
-     
-	 (D) labeling 
-       In this directory, files related to the human (ear) annotation of sound events are placed. The name of each file must be « labeling_<order number of the corresponding video> ». Each line of the file must be composed of: <type of event>;<court side>;<first sample>;<last sample>.
 
-(D) Hyperparameters
-	 (F) HyP_data_scheme.json
-     (F) HyP_learn_scheme.json
-       Data structure that formally represents the HyP_data and HyP_learn scheme. The structure must be preserved, so that the information can be processed in a generic way by the system.
-
+	(D) videos
+ 	The videos to be processed by the system are placed in this directory. The file name of each video must end with « _<video order number> ».
+  
+  	(D) audios
+   	In this directory, the system stores the audio extracted from the videos.
+    
+    (D) labeling 
+    In this directory, files related to the human (ear) annotation of sound events are placed. The name of each file must be « labeling_<order number of the corresponding video> ». Each line of the file must be composed of: <type of event>;<court side>;<first sample>;<last sample>.
+    
+    (D) Hyperparameters
+    	(F) HyP_data_scheme.json
+     
+     	(F) HyP_learn_scheme.json
+      	Data structure that formally represents the HyP_data and HyP_learn scheme. The structure must be preserved, so that the information can be processed in a generic way by the system.
+       
 (D) my_utils
-     (F) classifier_fuctions.py
-       Module that contains the functions to get the classifiers. This file can be used to extend the system by incorporating additional functions (plug-in model) to explore other classifiers.
+
+	(F) classifier_fuctions.py
+ 	Module that contains the functions to get the classifiers. This file can be used to extend the system by incorporating additional functions (plug-in model) to explore other classifiers.
      
 	 (F) feature_extraction_fuctions.py
        Module that contains the functions to extract audio features. Each function receives the following parameters: the audio file as a floating point time series; all HyP_data_global ; and the specific parameters to the respective audio feature that have been defined in the HyP_data schema. This file can be used to extend the system by incorporating additional functions (plug-in model) to explore other audio features.
