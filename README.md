@@ -1,7 +1,7 @@
 # Hyperparameter Optimization for Impulsive Sound Classifiers
 This is an academic final project, Master's Degree in Informatics and Computer Engineering.
 
-ISEL – Instituto Superior de Engenharia de Lisboa, Rua Conselheiro Emídio Navarro, 1959-007 Lisbon, Portugal
+ISEL – Instituto Superior de Engenharia de Lisboa, Portugal.
 
 
 ## Authors
